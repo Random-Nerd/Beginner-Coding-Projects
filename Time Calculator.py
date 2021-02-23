@@ -74,3 +74,8 @@ def add_time (start_time, duration_time, starting_day='' ):
 			minutestimes = '0' + str(minutestimes)
 	new_time = print('# Returns:' + ' ' + str(hourtime) + ':' + str(minutestimes) + ' ' + str(halftime) + ' ' + x)
 	return new_time
+#accepts input for running in cmd
+strt = input ('input start time (hours:minutes am/pm): ')
+dura = input ('input duration (hours:minutes): ')
+dy = input('input day (monday/tuesday/wednesday/etc): ')
+add_time(strt, dura, dy)
