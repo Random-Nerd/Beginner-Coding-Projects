@@ -1,0 +1,27 @@
+print('Please Type Monthly Income:')
+pay = input(' ')
+mon = int(pay)*12
+print('annual income:',mon)
+base=250000
+if mon <= base:
+    print ('zerooo taxes')
+else:
+    if mon > base and mon <= 400000:
+        taxinc = mon-base
+        perc= taxinc*0.20
+    if mon > 400000 and mon <=800000:
+        taxinc = mon-400000
+        perc= (taxinc*0.25)+30000
+    if mon > 800000 and mon <=2000000:
+        taxinc = mon-800000
+        perc= (taxinc*0.30)+130000
+    if mon > 2000000 and mon <=8000000:
+        taxinc = mon-2000000
+        perc= (taxinc*0.32)+490000
+    if mon > 8000000:
+        taxinc = mon-8000000
+        perc= (taxinc*0.35)+2400000
+
+    print ("total annual tax:",perc)
+    gross = perc/12
+    print('monthly tax payment:', gross)
